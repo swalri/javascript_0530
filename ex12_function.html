@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function testFunc01(x, y) {
+			console.log("첫번째 함수 실행");
+		}
+
+		function testFunc01(x) {
+			console.log("두번째 함수 실행" + x);
+		}
+
+		testFunc01(10, 20);
+		testFunc01(10);
+		testFunc01();
+
+		function testFunc02(x, y, z) {
+			document.write(`매개변수 : ${x}, ${y}, ${z}<br>`);
+			let sum;
+			if (z === undefined) {
+				sum = x + y;
+			} else {
+				sum = x + y + z;
+			}
+			return sum;
+		}
+
+		let r1 = testFunc02(2, 3);
+		let r2 = testFunc02(4, 5, 6);
+		document.write("인자 2개 결과 값 : " + r1 + "<br>");
+		document.write("인자 3개 결과 값 : " + r2 + "<br>");
+
+		function testFunc03() {
+			console.log(arguments);
+			console.log(arguments.length);
+			let sum = 0;
+			for (let i = 0; i < arguments.length; i++) {
+				sum += arguments[i];
+			}
+			document.write("합 : " + sum + "<br>");
+		}
+
+		testFunc03(1, 2);
+		testFunc03(1, 2, 3, 4, 5);
+	</script>
+</body>
+</html>

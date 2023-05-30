@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let num, sum = 0;
+		while(true){
+			num = prompt("수 입력(10~20사이의 수)");
+			if(num < 10 || num > 20){
+				console.log("범위를 벗어났습니다. 다시...");
+				continue;
+			}
+			break;
+		}
+		for(let i = 1; i <= num; i++){
+			sum += i;
+		}			
+		console.log("입력 받은 수까지의 합 : "+sum);
+	</script>
+
+</body>
+</html>

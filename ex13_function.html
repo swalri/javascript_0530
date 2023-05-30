@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function sumFunc02() {
+
+		}
+		let sumFunc = function(x, y) {
+			alert("익명함수 실행");
+			return x + y;
+		}
+		document.write(sumFunc(10, 20));
+
+		(function test() {
+			alert("즉시실행");
+			return "즉시 실행 함수는 초기화 목적으로 사용한다.";
+		})();
+		//document.write(result);
+
+		let name = "kim";
+		(function test(n) {
+			alert(n + "님 반갑. 즉시실행");
+		})(name);
+	</script>
+</body>
+</html>

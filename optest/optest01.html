@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const fool = prompt("아파트 충수 입력");
+		document.write(`<table border=1px;>`);
+		for (let i = fool; i >= 1; i--) {
+			document.write(`<tr>`);
+			for (let k = 0; k < 4; k++) {
+				document.write(`<td>${i}0${k+1}호</td>`);
+			}
+			document.write(`</tr>`);
+		}
+		document.write(`</table>`);
+	</script>
+</body>
+</html>

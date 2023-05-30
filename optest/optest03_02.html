@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/**1. 입력(두 수를 입력)*/
+		const input_01 = () => {
+			let num01 = prompt("첫번째 수를 입력");
+			let num02 = prompt("두번째 수를 입력");
+			let arr = [num01,num02];
+			return arr;
+		}
+		/**2. 입력(수를 입력)*/
+		const input_02 = () => prompt("수를 입력");
+		
+		
+		/**1. 연산(두 수의 크기비교하고 결과를 반환)*/
+		const calc_01 = (arr) => (arr[0] > arr[1]) ? arr[0] + "가 " + arr[1] + " 보다 더 크다" : arr[1] + "가 " + arr[0] + "보다 더 크다";
+		/**1. 출력(두수의 크기비교하는 함수)*/
+		const print_01 = () => calc_01(input_01());
+		//console.log(print_01());//실행
+
+		
+		/**2. 연산(짝홀 구분하고 결과를 반환)*/
+		const calc_02 = (n1) => (n1 % 2 == 0) ? n1+"은 짝수입니다" : n1+"은 홀수입니다";
+		/**2. 출력(짝수인지 홀수인지 확인하는 함수)*/
+		const print_02 = () => calc_02(input_02());
+		//console.log(print_02());//실행
+		
+
+		/**3. 연산(3의 배수인지 구분하고 반환)*/
+		const calc_03 = (n1) => (n1 % 3 == 0) ? n1+"은 3의 배수입니다" : n1+"은 3의 배수가 아닙니다";
+		/**3. 출력(3의 배수인지 확인하는 함수)*/
+		const print_03 = () => calc_03(input_02());
+		//console.log(print_03());//실행
+
+		
+		/**4. 연산(소수인지 확인하고 반화)*/
+		const clac_04 = (n1) => {
+			let i = 2;
+			let result = n1;
+			for (; i < n1; i++) {
+				if (i == 2) {
+					i++;
+				}
+				if (n1 % i == 0) {
+					break;
+				}
+			}
+			result += (n1 == i) ? "은 소수입니다" : "은 소수가 아닙니다";
+			return result;
+		} 
+		/**4. 출력(소수인지 확인하는 함수)*/
+		const print_04 = () => clac_04(input_02());
+		//console.log(print_04());//실행
+
+		
+		/**5. 연산(절대값을 구하고 반환)*/
+		const clac_05 = (n1) => {
+			let result = n1 + "의 절대값은 ";
+			result += (n1 < 0) ? n1 * -1 : n1;
+			result += "입니다"
+			return result;
+		}
+		/**5. 출력(절대값을 구하는 함수)*/
+		const print_05 = () => clac_05(input_02());
+		//console.log(print_05());//실행
+		
+		
+	</script>
+</body>
+</html>

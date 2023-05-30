@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const repet = 5;
+		for (let i = 1; i < repet; i++) {
+			document.write(`<h${i}>${i}.반복<h${i}>`);
+		}
+		document.write(`<hr>`);
+		for (let i = 1; i <= 5; i++) {
+			for (let k = 1; k < 5; k++) {
+				document.write(`i : ${i}, k : ${k}<br>`);
+			}
+		}
+		document.write(`<hr>`);
+		let i = 1, sum = 0;
+		while (i <= 10) {
+			sum += i;
+			i++;
+		}
+		document.write(`1~10까지의 합 : ${sum}`);
+	</script>
+</body>
+</html>

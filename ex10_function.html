@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log("프로그램 시작");
+
+		/**테스트함수*/
+		function test() {
+			console.log("test 함수 실행");
+		}
+
+		console.log("함수 지나옴");
+		test();
+		console.log("함수 종료됨");
+
+		/**지역변수*/
+		function localVal() {
+			let num = 2000;
+			if (true) {
+				let if_num = 10;
+				num += 2000;
+				console.log("if : " + num);
+			}
+			console.log(`localVal : ${num}`);
+			//console.log(`localVal : ${if_num}`);//에러
+		}
+
+		localVal();
+		let num01 = "전역변수입니다";
+
+		function localVal_01() {
+			let num = 1000;
+			console.log("local 01 : " + num);
+			console.log("num01 : " + num01);
+		}
+
+		function localVal_02() {
+			console.log("02 : " + num01);
+		}
+
+		localVal_01();
+		localVal_02();//에러
+	</script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/**1. 입력(두 수를 입력)*/
+		function input_01() {
+			let num01 = prompt("1. 수를 입력");
+			let num02 = prompt("1. 수를 입력");
+		}
+		/**1. 연산(두 수의 크기비교하고 결과를 반환)*/
+		function calc_01(n1, n2) {
+			let mm = (n1 > n2) ? n1 + "가 " + n1 + " 보다 더 크다" : n2 + "가 " + n1
+					+ "보다 더 크다";
+			return mm;
+		}
+		/**1. 출력(두수의 크기비교하는 함수)*/
+		function print_01() {
+			let num01 = input_01();
+			let result = calc_01(num01, num02);
+			console.log(result);
+		}
+		//print_01();//시행
+
+		/**2. 입력(수를 입력)*/
+		function input_02() {
+			let num01 = prompt("2. 수를 입력");
+		}
+		/**2. 연산(짝홀 구분하고 결과를 반환)*/
+		function calc_02(n1) {
+			let result = n1;
+			result += (n1 % 2 == 0) ? "은 짝수입니다" : "은 홀수입니다";
+			return result;
+		}
+		/**2. 출력(짝수인지 홀수인지 확인하는 함수)*/
+		function print_02() {
+			let num01 = input_02();
+			let result = calc_02(num01);
+			console.log(result);
+		}
+		//print_02();//실행
+
+		/**3. 입력(수를 입력)*/
+		function input_03() {
+			let num01 = prompt("3. 수를 입력");
+		}
+		/**3. 연산(3의 배수인지 구분하고 반환)*/
+		function calc_03(n1) {
+			let result = n1;
+			result += (n1 % 3 == 0) ? "은 3의 배수입니다" : "은 3의 배수가 아닙니다";
+			return result;
+		}
+		/**3. 출력(3의 배수인지 확인하는 함수)*/
+		function print_03() {
+			let num01 = input_03();
+			let result = calc_03(num01);
+			console.log(result);
+		}
+		//print_03();//실행
+
+		/**4. 입력(수를 입력)*/
+		function input_04() {
+			let num01 = prompt("4. 수를 입력");
+		}
+		/**4. 연산(소수인지 확인하고 반화)*/
+		function calc_04(n1) {
+			let i = 2;
+			let result = n1;
+			for (; i < n1; i++) {
+				if (i == 2) {
+					i++;
+				}
+				if (n1 % i == 0) {
+					break;
+				}
+			}
+			result += (n1 == i) ? "은 소수입니다" : "은 소수가 아닙니다";
+			return result;
+		}
+		/**4. 출력(소수인지 확인하는 함수)*/
+		function print_04() {
+			let num01 = input_04();
+			let result = calc_04(num01);
+			console.log(result);
+		}
+		//print_04();//실행
+
+		/**5. 입력(수를 입력)*/
+		function input_05() {
+			let num01 = prompt("5. 수를 입력");
+			return num01;
+		}
+		/**5. 연산(절대값을 구하고 반환)*/
+		function calc_05(n1) {
+			let result = n1 + "의 절대값은 ";
+			result += (n1 < 0) ? n1 * -1 : n1;
+			result += "입니다"
+			return result;
+		}
+		/**5. 출력(절대값을 구하는 함수)*/
+		function print_05() {
+			let num01 = input_05();
+			let result = calc_05(num01);
+			console.log(result);
+		}
+		//print_05();//실행
+	</script>
+</body>
+</html>

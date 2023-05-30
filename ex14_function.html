@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let func = () => {
+			console.log("화살표 함수");
+			return 100;
+		}
+		document.write(func());
+		const func01 = () => {10+20;}//보내는 값이 없어서 undefined으로 정의된다
+		const func02 = (n) => (n>10)?10:5; //중괄호가 없을경우 바로 결과값을 return한다
+		const func03 = () => {
+			return 10+20;
+		}
+		document.write("<hr>");
+		document.write(func01()+"<br>");
+		document.write(func02()+"<br>");
+		document.write(func03()+"<br>");
+	</script>
+</body>
+</html>
